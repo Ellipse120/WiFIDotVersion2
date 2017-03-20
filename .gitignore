@@ -1,0 +1,10 @@
+# Dependency directory
+node_modules
+
+# Environment variables
+.env
+
+#temporary document
+.idea/
+npm-debug.log
+public/angular/wifidot.min.js

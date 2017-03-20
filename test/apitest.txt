@@ -1,0 +1,64 @@
+test api/controller location.js and review.js
+
+locationsListByDistance
+put   http://localhost:3000/api/locations?lng=121.527121&lat=31.083196&maxDistance=20
+
+locationsCreate
+post   http://localhost:3000/api/locations
+x-www-form-urlencoded
+{ name: '如海超市',
+  address: '联航路 1109',
+  facilities: '饮料，套餐',
+  lng: '121.527131',
+  lat: '31.083134',
+  days1: '星期一 - 星期五',
+  opening1: '7:30am',
+  closing1: '10:00pm',
+  closed1: 'false',
+  days2: '星期六 - 星期日',
+  opening2: ' 10:00am',
+  closing2: ' 11:00pm',
+  closed2: 'close' }
+
+locationsReadOne
+get  http://localhost:3000/api/locations/57a766308226ea330f3cd018
+
+locationsUpdateOne
+put http://localhost:3000/api/locations/57a766308226ea330f3cd018
+x-www-form-urlencoded
+{ name: '如海超市',
+  address: '联航路 1109',
+  facilities: '饮料，套餐',
+  lng: '121.527131',
+  lat: '31.083134',
+  days1: '星期一 - 星期五',
+  opening1: '7:30am',
+  closing1: '10:00pm',
+  closed1: 'false',
+  days2: '星期六 - 星期日',
+  opening2: ' 10:00am',
+  closing2: ' 11:00pm',
+  closed2: 'close' }
+
+locationsDeleteOne
+delete  http://localhost:3000/api/locations/57a766308226ea330f3cd018/
+
+reviewsCreate
+post http://localhost:3000/api/locations/57a766308226ea330f3cd018/reviews
+{ author: '小明', 
+  rating: '4', 
+  reviewText: '环境棒棒哒！' 
+}
+
+reviewsReadOne
+get  http://localhost:3000/api/locations/57a766308226ea330f3cd018/reviews/57a8363012edf34a07d3bfb3
+
+reviewsUpdateOne
+put http://localhost:3000/api/locations/57a766308226ea330f3cd018/reviews/57a83ef58b3f70c607a0c21e
+{ author: '李宁',
+  rating: '3',
+  reviewText: '环境棒棒哒！'
+}
+
+reviewsDeleteOne
+delete  http://localhost:3000/api/locations/57a766308226ea330f3cd018/reviews/57a83e77daea59ae07cca9e7
