@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/WiFiDot';
+// var dbURI = 'mongodb://localhost/WiFiDot';
+var dbURI = 'mongodb://172.30.123.58/WiFiDot';
+
 //Heroku connect mongolab
 //if (process.env.NODE_ENV === 'production') {
 //  dbURI = process.env.MONGOLAB_URI;
